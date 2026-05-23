@@ -1,1 +1,155 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Mods</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+            font-family: 'Trebuchet MS', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        #wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            flex: 1;
+        }
+
+        h1 {
+            color: #ffffff;
+            font-size: 2.5em;
+            text-align: center;
+            border-bottom: 3px solid #444;
+            padding-bottom: 15px;
+            margin-top: 40px;
+        }
+
+        h2 {
+            color: #ffaa00; /* A bit of Minecraft gold */
+            margin-top: 40px;
+        }
+
+        p {
+            line-height: 1.6;
+            font-size: 1.1em;
+        }
+
+        /* Mod Box */
+        .mod-container {
+            background-color: #242424;
+            border: 2px solid #333;
+            border-radius: 8px;
+            padding: 25px;
+            margin-top: 30px;
+        }
+
+        .mod-title {
+            margin: 0 0 10px 0;
+            font-size: 1.8em;
+            color: #fff;
+        }
+
+        .tag {
+            background-color: #ffaa00;
+            color: #000;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.9em;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        /* Buttons */
+        .downloads {
+            margin-top: 25px;
+            display: flex;
+            gap: 15px;
+        }
+
+        a.btn {
+            text-decoration: none;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1em;
+            transition: opacity 0.2s;
+        }
+
+        a.btn:hover {
+            opacity: 0.8;
+        }
+
+        .btn-github {
+            background-color: #333;
+            border: 1px solid #555;
+        }
+
+        .btn-mediafire {
+            background-color: #1c62b9;
+            border: 1px solid #144e96;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #111;
+            color: #777;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="wrapper">
+        <header>
+            <h1>🛠️ Page Mods</h1>
+        </header>
+
+        <section id="intro">
+            <h2>Welcome to my project ✌️</h2>
+            <p>Here you'll find the custom Minecraft mods I've been working on. The goal is to bring some fresh and unique experiences to the game. Check out what's available below!</p>
+        </section>
+
+        <section id="mod-list">
+            <h2>📦 Available Mods</h2>
+            
+            <div class="mod-container">
+                <h3 class="mod-title">🌌 Page Dims</h3>
+                <div class="tag">Current Dimension: Ultra</div>
+                <p>This mod adds unique and crazy dimensions to Minecraft. Perfect for players looking for a new challenge or just wanting to explore something totally different.</p>
+                
+                <div class="downloads">
+                    <a href="https://github.com/pagemods/downloads/raw/refs/heads/main/Page%20Dims/pagedims-1.0.0-neoforge-1.21.8.jar" class="btn btn-github dl-btn">Download on GitHub</a>
+                    <a href="https://www.mediafire.com/file/r9nb9kn0rj0l0pu/pagedims-1.0.0-neoforge-1.21.8.jar/file" target="_blank" class="btn btn-mediafire dl-btn">Download on MediaFire</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2026 Page Mods 🎮</p>
+    </footer>
+
+    <script>
+        // Simple alert to say thanks when someone downloads the mod
+        const downloadButtons = document.querySelectorAll('.dl-btn');
+        
+        downloadButtons.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                alert("Thanks for downloading Page Dims! Have fun in the Ultra dimension! 🚀");
+            });
+        });
+    </script>
+</body>
+</html>
